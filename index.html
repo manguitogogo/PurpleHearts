@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purple Hearts – Take Two · 07 Mayo 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #f7f5fa;
+    --surface: #ffffff;
+    --border:  #ebe4f4;
+    --p1:      #6A0DAD;
+    --p2:      #772FAD;
+    --p3:      #BA81E2;
+    --p4:      #e5d4f7;
+    --p5:      #f4eeff;
+    --text:    #1a0d2e;
+    --muted:   #9480b0;
+    --green:   #16a34a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 24px 16px;
+    position: sticky; top: 0; z-index: 10;
+  }
+  .site-header h1 {
+    font-size: 1.25rem; font-weight: 700; color: var(--text);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .site-header .sub {
+    font-size: .72rem; color: var(--muted); font-weight: 400;
+    letter-spacing: .04em; margin-top: 2px;
+  }
+
+  /* ── WRAPPER ── */
+  .wrapper {
+    max-width: 660px; margin: 0 auto; padding: 20px 16px 80px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  /* ── HERO CARD ── */
+  .hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 22px 22px;
+    position: relative; overflow: hidden;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--p1), var(--p3));
+  }
+  .hero-date {
+    font-size: .66rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--p2); margin-bottom: 10px;
+  }
+  .hero-card p { font-size: .9rem; color: var(--text); line-height: 1.65; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted); padding: 6px 0 2px; margin-top: 4px;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* ── STEP CARD ── */
+  .step-card { padding: 20px 22px; }
+  .step-row { display: flex; align-items: flex-start; gap: 13px; }
+  .step-text { font-size: .87rem; }
+
+  /* ── ALERT ── */
+  .alert {
+    padding: 14px 17px;
+    display: flex; gap: 11px; align-items: flex-start;
+    border-radius: 13px; border: 1px solid;
+    font-size: .82rem; line-height: 1.6;
+  }
+  .alert.yellow { background: #fffbeb; border-color: #fde68a; }
+  .alert.purple { background: var(--p5); border-color: var(--p4); }
+  .alert-icon { font-size: .95rem; flex-shrink: 0; margin-top: 2px; }
+
+  /* ── FAQ — plain list, no accordion ── */
+  .faq-list { padding: 0; }
+  .faq-row {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-row:last-child { border-bottom: none; }
+  .faq-q { font-size: .86rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .faq-a { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+  .faq-a a { color: var(--p1); }
+  .faq-a .hl { color: var(--p2); font-weight: 600; }
+  .faq-btn { margin-top: 10px; }
+
+  /* ── COLORS ── */
+  .colors-card { padding: 18px 22px; }
+  .swatches { display: flex; gap: 10px; flex-wrap: wrap; }
+  .swatch { display: flex; align-items: center; gap: 7px; font-size: .73rem; font-weight: 500; color: var(--text); }
+  .swatch-dot { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid rgba(0,0,0,.08); flex-shrink: 0; }
+  .zones-row {
+    margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border);
+    display: flex; gap: 8px; flex-wrap: wrap;
+    font-size: .8rem; color: var(--muted);
+  }
+  .zones-row strong { color: var(--text); }
+  .materials-block {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border);
+  }
+  .materials-title { font-size: .8rem; color: var(--text); margin-bottom: 8px; }
+  .materials-list {
+    list-style: none; display: flex; flex-direction: column; gap: 5px;
+  }
+  .materials-list li {
+    font-size: .8rem; color: var(--muted);
+    padding-left: 14px; position: relative;
+  }
+  .materials-list li::before {
+    content: '—'; position: absolute; left: 0; color: var(--p3);
+  }
+
+  /* ── ORGANIZERS ── */
+  .org-card { padding: 16px 20px; }
+  .org-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .org-pill {
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 100px;
+    background: var(--p5); border: 1px solid var(--p4);
+    text-decoration: none; font-size: .77rem; font-weight: 600; color: var(--p1);
+    transition: background .15s;
+  }
+  .org-pill:hover { background: var(--p4); }
+  .org-avatar-img {
+    width: 22px; height: 22px; border-radius: 50%;
+    object-fit: cover; flex-shrink: 0;
+    border: 1.5px solid var(--p3);
+    display: none;
+  }
+  .org-avatar-img.loaded { display: inline-block; }
+
+  /* ── GENERIC BRAND BUTTONS ── */
+  .btn-row { display: flex; flex-direction: column; gap: 8px; }
+  .btn-brand {
+    display: flex; align-items: center; gap: 10px;
+    padding: 13px 16px; border-radius: 12px;
+    text-decoration: none; font-size: .83rem; font-weight: 600;
+    border: 1px solid transparent;
+    transition: opacity .15s, transform .12s;
+  }
+  .btn-brand:hover { opacity: .85; transform: translateY(-1px); }
+  .btn-brand .bicon { width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .btn-brand .blabel { flex: 1; }
+  .btn-brand .barrow { font-size: .75rem; opacity: .6; }
+
+  /* All brand buttons — soft purple base (FAQ inline) */
+  .btn-canva, .btn-forms {
+    background: var(--p5); color: var(--p1); border-color: var(--p4);
+  }
+  .btn-canva:hover, .btn-forms:hover { background: var(--p4); }
+  .btn-canva .bicon  { color: #7D2AE8; }
+  .btn-forms .bicon  { color: #673AB7; }
+
+  /* Brand colors for utility links and presave */
+  .btn-x       { background: #000;     color: white; border-color: #222; }
+  .btn-spotify { background: #1DB954;  color: white; border-color: #18a34a; }
+  .btn-wa      { background: #25D366;  color: white; border-color: #1ebe5c; }
+  .btn-apple   { background: #111;     color: white; border-color: #333; }
+  .btn-x:hover, .btn-spotify:hover, .btn-wa:hover, .btn-apple:hover { opacity: .88; }
+
+  /* ── ARIRANG SECTION ── */
+  .arirang-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  .arirang-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, #c0392b, #8e24aa, #c0392b);
+  }
+  .arirang-top { padding: 20px 22px 14px; }
+  .arirang-top h2 { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+  .arirang-btns { padding: 0 22px 20px; display: flex; flex-direction: column; gap: 8px; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    font-size: .67rem; color: var(--muted);
+    line-height: 2; padding-top: 10px;
+  }
+  footer a { color: var(--p2); text-decoration: none; font-weight: 600; }
+
+  @media (max-width: 460px) {
+    .site-header { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <h1>💜 Purple Hearts</h1>
+  <div class="sub">Fan project · 07 de Mayo 2026 · CDMX</div>
+</header>
+
+<div class="wrapper">
+
+  <!-- HERO -->
+  <div class="hero-card">
+    <div class="hero-date">Take Two · 07 de Mayo · 2026</div>
+    <p>Durante <strong>Take Two</strong>, llenemos el estadio de corazones morados con la frase <strong style="color:var(--p1)">"I STAYED"</strong> para recordarle a BTS que nos quedamos.</p>
+  </div>
+
+  <!-- QUÉ HACER -->
+  <div class="section-label">¿Qué hay que hacer?</div>
+
+  <div class="card step-card">
+    <div class="step-row">
+      <div class="step-text">Cuando empiece <strong>"Take Two"</strong>, levanta tu corazón a la altura de tu Army Bomb durante toda la canción.</div>
+    </div>
+  </div>
+
+  <div class="alert yellow">
+    <div class="alert-icon">⚠️</div>
+    <div><strong>IMPORTANTE:</strong> Mantengan el corazón en alto desde el inicio hasta el final de la canción para que el efecto se vea en todo el estadio.</div>
+  </div>
+
+  <div class="alert purple">
+    <div class="alert-icon">💜</div>
+    <div><strong>Sobre el Army Bomb:</strong> NO se apaga en ningún momento. Puedes sostener el corazón junto a tu Army Bomb y usar el celular con la otra mano.</div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-label">Preguntas frecuentes</div>
+
+  <div class="card faq-list">
+    <div class="faq-row">
+      <div class="faq-q">¿Qué pasa si "Take Two" no está en el setlist?</div>
+      <div class="faq-a">Se hará durante <span class="hl">"Magic Shop"</span>. Si ninguna canción está disponible, se modificará y avisará de inmediato. Espera nuestra confirmación.</div>
+    </div>
+    <div class="faq-row">
+      <div class="faq-q">¿Puedo hacer mi propio corazón?</div>
+      <div class="faq-a">¡Claro! Encuentra los materiales y la guía de colores aquí:</div>
+      <a class="btn-brand btn-canva faq-btn" href="https://www.canva.com/design/DAHDH8piK6k/jQRHbJb7aPI1so2Ezmm5RA/edit" target="_blank">
+        <div class="bicon" style="background:rgba(255,255,255,.18); border-radius:6px;">✦</div>
+        <div class="blabel">Descargar plantilla — Canva</div>
+        <div class="barrow">↗</div>
+      </a>
+    </div>
+    <div class="faq-row">
+      <div class="faq-q">¿Cómo ser voluntaria?</div>
+      <div class="faq-a">¡Genial! Llena el formulario y nos pondremos en contacto contigo 💜</div>
+      <a class="btn-brand btn-forms faq-btn" href="https://forms.gle/rXWNwRULpZThAmMS7" target="_blank">
+        <div class="bicon">📋</div>
+        <div class="blabel">Formulario de voluntarias — Google Forms</div>
+        <div class="barrow">↗</div>
+      </a>
+    </div>
+    <div class="faq-row">
+      <div class="faq-q">¿Cómo me entero de más detalles?</div>
+      <div class="faq-a">Sigue a las fanbases organizadoras en X (Twitter) para actualizaciones en tiempo real.</div>
+    </div>
+  </div>
+
+  <!-- COLORES -->
+  <div class="section-label">Haz tu propio corazón — Colores</div>
+  <div class="card colors-card">
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-dot" style="background:#6A0DAD"></div>#6A0DAD</div>
+      <div class="swatch"><div class="swatch-dot" style="background:#772FAD"></div>#772FAD</div>
+      <div class="swatch"><div class="swatch-dot" style="background:#BA81E2"></div>#BA81E2</div>
+    </div>
+    <div class="zones-row">
+      <span>📐 <strong>Zona Platino:</strong> corazón pequeño</span>
+      <span>&nbsp;·&nbsp;</span>
+      <span>💜 <strong>Otras zonas:</strong> corazón grande</span>
+    </div>
+    <div class="materials-block">
+      <div class="materials-title">Si usarás hoja de color para el 💜, aquí hay algunas opciones:</div>
+      <ul class="materials-list">
+        <li>Hoja de máquina color morado o lila</li>
+        <li>Hoja Saira</li>
+        <li>Papel Bristol</li>
+        <li>Papel Iris</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ORGANIZADORAS -->
+  <div class="section-label">Organizadoras</div>
+  <div class="card org-card">
+    <div class="org-row" id="org-row">
+      <a class="org-pill" href="https://twitter.com/axomysmx" target="_blank">
+        <img class="org-avatar-img" id="av-axomy" src="" alt="axomysmx">
+        @axomysmx
+      </a>
+      <a class="org-pill" href="https://twitter.com/www_bangtan_613" target="_blank">
+        <img class="org-avatar-img" id="av-bangtan" src="" alt="www_bangtan_613">
+        @www_bangtan_613
+      </a>
+      <a class="org-pill" href="https://twitter.com/cinnamoon_bee" target="_blank">
+        <img class="org-avatar-img" id="av-cinna" src="" alt="cinnamoon_bee">
+        @cinnamoon_bee
+      </a>
+    </div>
+  </div>
+
+  <!-- LINKS DE UTILIDAD -->
+  <div class="section-label" style="margin-top: 6px;">Links de utilidad</div>
+  <div class="card" style="padding: 14px 16px;">
+    <div class="btn-row">
+      <a class="btn-brand btn-x" href="https://x.com/www_bangtan_613/status/2029242506844532839?s=20" target="_blank">
+        <div class="bicon">𝕏</div>
+        <div class="blabel">Ver proyecto en X</div>
+        <div class="barrow">↗</div>
+      </a>
+      <a class="btn-brand btn-spotify" href="https://open.spotify.com/track/4cOdy8FRlS6WMCzIFMBSv5" target="_blank">
+        <div class="bicon">♫</div>
+        <div class="blabel">Take Two — Spotify</div>
+        <div class="barrow">↗</div>
+      </a>
+      <a class="btn-brand btn-wa" href="https://chat.whatsapp.com/KBdkl9BdZCV3Kv3SqgNk5R?mode=gi_t" target="_blank">
+        <div class="bicon">💬</div>
+        <div class="blabel">Grupo de WhatsApp</div>
+        <div class="barrow">↗</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ══ ARIRANG ══ -->
+  <div class="section-label" style="margin-top: 16px;">Pre-save</div>
+
+  <div class="arirang-card">
+    <div class="arirang-top">
+      <h2>🎵 Pre guarda Arirang</h2>
+    </div>
+    <div class="arirang-btns">
+      <a class="btn-brand btn-spotify" href="https://open.spotify.com/prerelease/1DcxHW214MCDxXju71RbvX?si=f3e049164b5948ce" target="_blank">
+        <div class="bicon">♫</div>
+        <div class="blabel">Pre-save en Spotify</div>
+        <div class="barrow">↗</div>
+      </a>
+      <a class="btn-brand btn-apple" href="https://music.apple.com/mx/album/arirang/1868862375" target="_blank">
+        <div class="bicon">🎵</div>
+        <div class="blabel">Pre-save en Apple Music</div>
+        <div class="barrow">↗</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://twitter.com/axomysmx">@axomysmx</a> ·
+    <a href="https://twitter.com/www_bangtan_613">@www_bangtan_613</a> ·
+    <a href="https://twitter.com/cinnamoon_bee">@cinnamoon_bee</a><br>
+    Purple Hearts · BTS Take Two · 07 Mayo 2026 · Más detalles próximamente 💜
+  </footer>
+
+</div>
+<script>
+  // Load Twitter avatars with fallback sources
+  const avatars = [
+    { id: 'av-axomy',   handle: 'axomysmx' },
+    { id: 'av-bangtan', handle: 'www_bangtan_613' },
+    { id: 'av-cinna',   handle: 'cinnamoon_bee' },
+  ];
+  avatars.forEach(({ id, handle }) => {
+    const img = document.getElementById(id);
+    if (!img) return;
+    const sources = [
+      `https://unavatar.io/twitter/${handle}`,
+      `https://unavatar.io/x/${handle}`,
+      `https://api.dicebear.com/7.x/initials/svg?seed=${handle}&backgroundColor=e5d4f7&textColor=6A0DAD`,
+    ];
+    let i = 0;
+    function tryNext() {
+      if (i >= sources.length) return;
+      img.src = sources[i++];
+      img.onload = () => img.classList.add('loaded');
+      img.onerror = tryNext;
+    }
+    tryNext();
+  });
+</script>
+</body>
+</html>
