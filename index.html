@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Purple Hearts – Take Two · 07 Mayo 2026</title>
+<title>Purple Hearts · Into the Sun · 07 Mayo 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -18,201 +18,152 @@
     --p5:      #f4eeff;
     --text:    #1a0d2e;
     --muted:   #9480b0;
-    --green:   #16a34a;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-  }
+  body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; line-height: 1.6; }
 
   /* ── HEADER ── */
-  .site-header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 18px 24px 16px;
-    position: sticky; top: 0; z-index: 10;
-  }
-  .site-header h1 {
-    font-size: 1.25rem; font-weight: 700; color: var(--text);
-    display: flex; align-items: center; gap: 8px;
-  }
-  .site-header .sub {
-    font-size: .72rem; color: var(--muted); font-weight: 400;
-    letter-spacing: .04em; margin-top: 2px;
-  }
+  .site-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 18px 24px 16px; position: sticky; top: 0; z-index: 10; }
+  .site-header h1 { font-size: 1.25rem; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px; }
+  .site-header .sub { font-size: .72rem; color: var(--muted); font-weight: 400; letter-spacing: .04em; margin-top: 2px; }
 
   /* ── WRAPPER ── */
-  .wrapper {
-    max-width: 660px; margin: 0 auto; padding: 20px 16px 80px;
-    display: flex; flex-direction: column; gap: 10px;
-  }
+  .wrapper { max-width: 660px; margin: 0 auto; padding: 20px 16px 80px; display: flex; flex-direction: column; gap: 10px; }
 
-  /* ── HERO CARD ── */
-  .hero-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 26px 22px 22px;
-    position: relative; overflow: hidden;
-  }
-  .hero-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, var(--p1), var(--p3));
-  }
-  .hero-date {
-    font-size: .66rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
-    color: var(--p2); margin-bottom: 10px;
-  }
-  .hero-card p { font-size: .9rem; color: var(--text); line-height: 1.65; }
+  /* ── INTRO HERO ── */
+  .intro-hero { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .intro-top { background: var(--p1); padding: 28px 24px 24px; }
+  .intro-top .intro-tag { font-size: .6rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #d9b8f5; margin-bottom: 8px; }
+  .intro-top .intro-title { font-size: 1.5rem; font-weight: 700; color: white; line-height: 1.2; margin-bottom: 6px; }
+  .intro-top .intro-sub { font-size: .82rem; color: #d9b8f5; line-height: 1.5; }
+  .intro-top .intro-date { display: inline-block; margin-top: 12px; font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: white; background: rgba(255,255,255,.15); padding: 5px 12px; border-radius: 20px; }
+  .intro-steps { padding: 0 22px; }
+  .intro-step { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+  .intro-step:last-child { border-bottom: none; }
+  .intro-num { width: 28px; height: 28px; border-radius: 50%; background: var(--p5); border: 1px solid var(--p4); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 700; color: var(--p1); margin-top: 1px; }
+  .intro-txt { font-size: .87rem; color: var(--text); line-height: 1.55; }
+  .intro-note { font-size: .75rem; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+  .intro-song-btn { display: flex; width: fit-content; align-items: center; gap: 9px; margin-top: 12px; padding: 8px 11px; border-radius: 10px; background: #f0faf4; border: 1px solid #bbf0cc; text-decoration: none; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .intro-song-btn .s-ico { width: 28px; height: 28px; border-radius: 50%; background: #1DB954; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .intro-song-btn .s-txt strong { display: block; font-size: .75rem; font-weight: 600; color: #166534; }
+  .intro-song-btn .s-txt span { font-size: .68rem; color: #166534; opacity: .75; }
+
+  /* ── CONNECTOR ── */
+  .connector { display: flex; align-items: center; gap: 8px; padding: 7px 4px; }
+  .connector-line { flex: 1; height: 1px; background: var(--border); }
+  .connector-txt { font-size: .65rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 
   /* ── SECTION LABEL ── */
-  .section-label {
-    font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
-    color: var(--muted); padding: 6px 0 2px; margin-top: 4px;
-  }
+  .section-label { font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); padding: 6px 0 2px; margin-top: 4px; }
 
   /* ── CARD ── */
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
 
-  /* ── STEP CARD ── */
-  .step-card { padding: 20px 22px; }
-  .step-row { display: flex; align-items: flex-start; gap: 13px; }
-  .step-text { font-size: .87rem; }
-
-  /* ── ALERT ── */
-  .alert {
-    padding: 14px 17px;
-    display: flex; gap: 11px; align-items: flex-start;
-    border-radius: 13px; border: 1px solid;
-    font-size: .82rem; line-height: 1.6;
-  }
+  /* ── ALERTS ── */
+  .alert { padding: 14px 17px; display: flex; gap: 11px; align-items: flex-start; border-radius: 13px; border: 1px solid; font-size: .82rem; line-height: 1.6; }
   .alert.yellow { background: #fffbeb; border-color: #fde68a; }
   .alert.purple { background: var(--p5); border-color: var(--p4); }
   .alert-icon { font-size: .95rem; flex-shrink: 0; margin-top: 2px; }
 
-  /* ── FAQ — plain list, no accordion ── */
+  /* ── DECISION MAP ── */
+  .dmap-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .dmap-inner { padding: 18px 20px 20px; }
+  .slabel { font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .zgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .zbtn { padding: 11px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); cursor: pointer; text-align: left; width: 100%; font-family: 'Plus Jakarta Sans', sans-serif; transition: background .15s, border-color .15s; }
+  .zbtn:hover { background: var(--p5); border-color: var(--p4); }
+  .zbtn.sel { border: 2px solid var(--p2); background: var(--p5); }
+  .zbtn .zn { font-size: .82rem; font-weight: 600; color: var(--text); }
+  .zbtn .zd { font-size: .72rem; color: var(--muted); margin-top: 2px; }
+  .pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pbtn { padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); cursor: pointer; text-align: left; width: 100%; font-family: 'Plus Jakarta Sans', sans-serif; transition: background .15s, border-color .15s; }
+  .pbtn:hover { background: var(--p5); border-color: var(--p4); }
+  .pbtn.sel { border: 2px solid var(--p2); background: var(--p5); }
+  .pbtn .pt { font-size: .82rem; font-weight: 600; color: var(--text); }
+  .pbtn .pd { font-size: .72rem; color: var(--muted); margin-top: 3px; line-height: 1.4; }
+  .dmap-divider { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+  .dback { font-size: .72rem; color: var(--muted); background: none; border: none; cursor: pointer; padding: 0; margin-bottom: 10px; display: inline-block; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .dback:hover { color: var(--text); }
+  .slist { display: flex; flex-direction: column; gap: 12px; }
+  .srow { display: flex; gap: 10px; align-items: flex-start; }
+  .sdot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; background: var(--p5); display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 600; color: var(--p1); margin-top: 1px; border: 1px solid var(--p4); }
+  .stxt { font-size: .83rem; color: var(--text); line-height: 1.55; flex: 1; }
+  .snote { font-size: .75rem; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+  .slink { display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; padding: 7px 13px; border-radius: 8px; border: 1px solid var(--p4); background: var(--p1); color: white; font-size: .75rem; font-weight: 600; text-decoration: none; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .slink:hover { background: var(--p2); }
+  .slink.pending { background: var(--bg); color: var(--muted); border-color: var(--border); pointer-events: none; }
+  .smats { margin: 6px 0 0 0; padding-left: 14px; font-size: .75rem; color: var(--muted); line-height: 1.8; }
+  .dmap-hidden { display: none; }
+
+  /* ── FAQ ACCORDION ── */
   .faq-list { padding: 0; }
-  .faq-row {
-    padding: 15px 20px;
-    border-bottom: 1px solid var(--border);
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    width: 100%; padding: 15px 20px; background: none; border: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: .86rem; font-weight: 600;
+    color: var(--text); text-align: left; transition: background .15s;
   }
-  .faq-row:last-child { border-bottom: none; }
-  .faq-q { font-size: .86rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-  .faq-a { font-size: .82rem; color: var(--muted); line-height: 1.6; }
-  .faq-a a { color: var(--p1); }
+  .faq-q:hover { background: var(--bg); }
+  .faq-chevron { color: var(--p3); font-size: .75rem; flex-shrink: 0; transition: transform .25s; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .25s;
+    font-size: .82rem; color: var(--muted); line-height: 1.65; padding: 0 20px;
+  }
+  .faq-item.open .faq-a { max-height: 600px; padding: 0 20px 16px; }
   .faq-a .hl { color: var(--p2); font-weight: 600; }
-  .faq-btn { margin-top: 10px; }
+  .faq-btn { margin-top: 10px; display: block; }
 
   /* ── COLORS ── */
   .colors-card { padding: 18px 22px; }
   .swatches { display: flex; gap: 10px; flex-wrap: wrap; }
   .swatch { display: flex; align-items: center; gap: 7px; font-size: .73rem; font-weight: 500; color: var(--text); }
   .swatch-dot { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid rgba(0,0,0,.08); flex-shrink: 0; }
-  .zones-row {
-    margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border);
-    display: flex; gap: 8px; flex-wrap: wrap;
-    font-size: .8rem; color: var(--muted);
-  }
+  .zones-row { margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border); display: flex; gap: 8px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
   .zones-row strong { color: var(--text); }
-  .materials-block {
-    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border);
-  }
+  .materials-block { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
   .materials-title { font-size: .8rem; color: var(--text); margin-bottom: 8px; }
-  .materials-list {
-    list-style: none; display: flex; flex-direction: column; gap: 5px;
-  }
-  .materials-list li {
-    font-size: .8rem; color: var(--muted);
-    padding-left: 14px; position: relative;
-  }
-  .materials-list li::before {
-    content: '—'; position: absolute; left: 0; color: var(--p3);
-  }
+  .materials-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .materials-list li { font-size: .8rem; color: var(--muted); padding-left: 14px; position: relative; }
+  .materials-list li::before { content: '—'; position: absolute; left: 0; color: var(--p3); }
 
   /* ── ORGANIZERS ── */
   .org-card { padding: 16px 20px; }
   .org-row { display: flex; gap: 8px; flex-wrap: wrap; }
-  .org-pill {
-    display: flex; align-items: center; gap: 6px;
-    padding: 6px 14px; border-radius: 100px;
-    background: var(--p5); border: 1px solid var(--p4);
-    text-decoration: none; font-size: .77rem; font-weight: 600; color: var(--p1);
-    transition: background .15s;
-  }
+  .org-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 100px; background: var(--p5); border: 1px solid var(--p4); text-decoration: none; font-size: .77rem; font-weight: 600; color: var(--p1); transition: background .15s; }
   .org-pill:hover { background: var(--p4); }
-  .org-avatar-img {
-    width: 22px; height: 22px; border-radius: 50%;
-    object-fit: cover; flex-shrink: 0;
-    border: 1.5px solid var(--p3);
-    display: none;
-  }
-  .org-avatar-img.loaded { display: inline-block; }
+  .org-avatar-img { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1.5px solid var(--p3); display: inline-block; background: var(--p4); }
 
-  /* ── GENERIC BRAND BUTTONS ── */
+  /* ── BRAND BUTTONS ── */
   .btn-row { display: flex; flex-direction: column; gap: 8px; }
-  .btn-brand {
-    display: flex; align-items: center; gap: 10px;
-    padding: 13px 16px; border-radius: 12px;
-    text-decoration: none; font-size: .83rem; font-weight: 600;
-    border: 1px solid transparent;
-    transition: opacity .15s, transform .12s;
-  }
+  .btn-brand { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-radius: 12px; text-decoration: none; font-size: .83rem; font-weight: 600; border: 1px solid transparent; transition: opacity .15s, transform .12s; }
   .btn-brand:hover { opacity: .85; transform: translateY(-1px); }
   .btn-brand .bicon { width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
   .btn-brand .blabel { flex: 1; }
   .btn-brand .barrow { font-size: .75rem; opacity: .6; }
-
-  /* All brand buttons — soft purple base (FAQ inline) */
-  .btn-canva, .btn-forms {
-    background: var(--p5); color: var(--p1); border-color: var(--p4);
-  }
+  .btn-canva, .btn-forms { background: var(--p5); color: var(--p1); border-color: var(--p4); }
   .btn-canva:hover, .btn-forms:hover { background: var(--p4); }
-  .btn-canva .bicon  { color: #7D2AE8; }
-  .btn-forms .bicon  { color: #673AB7; }
-
-  /* Brand colors for utility links and presave */
-  .btn-x       { background: #000;     color: white; border-color: #222; }
-  .btn-spotify { background: #1DB954;  color: white; border-color: #18a34a; }
-  .btn-wa      { background: #25D366;  color: white; border-color: #1ebe5c; }
-  .btn-apple   { background: #111;     color: white; border-color: #333; }
+  .btn-canva .bicon { color: #7D2AE8; }
+  .btn-forms .bicon { color: #673AB7; }
+  .btn-x       { background: #000;    color: white; border-color: #222; }
+  .btn-spotify { background: #1DB954; color: white; border-color: #18a34a; }
+  .btn-wa      { background: #25D366; color: white; border-color: #1ebe5c; }
+  .btn-apple   { background: #111;    color: white; border-color: #333; }
   .btn-x:hover, .btn-spotify:hover, .btn-wa:hover, .btn-apple:hover { opacity: .88; }
 
-  /* ── ARIRANG SECTION ── */
-  .arirang-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-  }
-  .arirang-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, #c0392b, #8e24aa, #c0392b);
-  }
+  /* ── ARIRANG ── */
+  .arirang-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; position: relative; }
+  .arirang-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #c0392b, #8e24aa, #c0392b); }
   .arirang-top { padding: 20px 22px 14px; }
   .arirang-top h2 { font-size: 1.05rem; font-weight: 700; color: var(--text); }
   .arirang-btns { padding: 0 22px 20px; display: flex; flex-direction: column; gap: 8px; }
 
   /* ── FOOTER ── */
-  footer {
-    text-align: center;
-    font-size: .67rem; color: var(--muted);
-    line-height: 2; padding-top: 10px;
-  }
+  footer { text-align: center; font-size: .67rem; color: var(--muted); line-height: 2; padding-top: 10px; }
   footer a { color: var(--p2); text-decoration: none; font-weight: 600; }
 
   @media (max-width: 460px) {
@@ -222,7 +173,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <h1>💜 Purple Hearts</h1>
   <div class="sub">Fan project · 07 de Mayo 2026 · CDMX</div>
@@ -230,85 +180,148 @@
 
 <div class="wrapper">
 
-  <!-- HERO -->
-  <div class="hero-card">
-    <div class="hero-date">Take Two · 07 de Mayo · 2026</div>
-    <p>Durante <strong>Take Two</strong>, llenemos el estadio de corazones morados con la frase <strong style="color:var(--p1)">"I STAYED"</strong> para recordarle a BTS que nos quedamos.</p>
-  </div>
-
-  <!-- QUÉ HACER -->
-  <div class="section-label">¿Qué hay que hacer?</div>
-
-  <div class="card step-card">
-    <div class="step-row">
-      <div class="step-text">Cuando empiece <strong>"Take Two"</strong>, levanta tu corazón a la altura de tu Army Bomb durante toda la canción.</div>
+  <!-- INTRO -->
+  <div class="intro-hero">
+    <div class="intro-top">
+      <div class="intro-tag">Purple Hearts · Para BTS</div>
+      <div class="intro-title">💜 Into the Sun</div>
+      <div class="intro-sub">Levantaremos corazones morados para recordarle a BTS que los esperamos y los apoyamos.</div>
+      <div class="intro-date">07 de Mayo · 2026 · CDMX</div>
+    </div>
+    <div class="intro-steps">
+      <div class="intro-step">
+        <div class="intro-num">1</div>
+        <div class="intro-txt">
+          Cuando empiece <strong>Into the Sun</strong>, levanta tu corazón y mantenlo en alto de inicio a fin.
+          <div class="intro-note">Habrá coordinadoras por sección para recordarte el momento. El Army Bomb NO se apaga — puedes sostenerlo junto al corazón.</div>
+          <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:12px;">
+            <a class="intro-song-btn" href="https://open.spotify.com/track/4cOdy8FRlS6WMCzIFMBSv5" target="_blank">
+              <div class="s-ico" style="background:#1DB954;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+              <div class="s-txt"><strong>Spotify</strong><span>Into the Sun</span></div>
+            </a>
+            <a class="intro-song-btn" href="https://music.apple.com/mx/album/arirang/1868862375" target="_blank">
+              <div class="s-ico" style="background:#111; font-size:11px; color:white;">♫</div>
+              <div class="s-txt"><strong style="color:#1a0d2e;">Apple Music</strong><span style="color:#555;">Into the Sun</span></div>
+            </a>
+            <a class="intro-song-btn" href="https://www.youtube.com/watch?v=N_Id6KNQtLw" target="_blank">
+              <div class="s-ico" style="background:#FF0000; font-size:11px; color:white;">▶</div>
+              <div class="s-txt"><strong style="color:#1a0d2e;">YouTube</strong><span style="color:#555;">Into the Sun</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="alert yellow">
-    <div class="alert-icon">⚠️</div>
-    <div><strong>IMPORTANTE:</strong> Mantengan el corazón en alto desde el inicio hasta el final de la canción para que el efecto se vea en todo el estadio.</div>
+  <!-- CONECTOR -->
+  <div class="connector">
+    <div class="connector-line"></div>
+    <div class="connector-txt">¿qué tengo que hacer según mi zona?</div>
+    <div class="connector-line"></div>
   </div>
 
-  <div class="alert purple">
-    <div class="alert-icon">💜</div>
-    <div><strong>Sobre el Army Bomb:</strong> NO se apaga en ningún momento. Puedes sostener el corazón junto a tu Army Bomb y usar el celular con la otra mano.</div>
+  <!-- MAPA DE DECISIONES -->
+  <div class="dmap-card">
+    <div class="dmap-inner">
+
+      <div id="dm-s1">
+        <div class="slabel">¿A qué zona vas el 7 de mayo?</div>
+        <div class="zgrid" id="dm-zgrid"></div>
+      </div>
+
+      <div id="dm-s2" class="dmap-hidden">
+        <hr class="dmap-divider">
+        <button class="dback" id="dm-back1">← Cambiar zona</button>
+        <div class="slabel">¿Qué quieres hacer?</div>
+        <div class="pgrid">
+          <button class="pbtn" id="dm-p1"><div class="pt">Solo quiero participar</div><div class="pd">Saber qué hacer el día del concierto</div></button>
+          <button class="pbtn" id="dm-p2"><div class="pt">Quiero ser voluntaria</div><div class="pd">Hacer o repartir corazones oficialmente</div></button>
+          <button class="pbtn" id="dm-p3"><div class="pt">Quiero hacer mi propio corazón</div><div class="pd">Materiales y plantilla</div></button>
+        </div>
+      </div>
+
+      <div id="dm-s3" class="dmap-hidden">
+        <hr class="dmap-divider">
+        <button class="dback" id="dm-back2">← Cambiar opción</button>
+        <div class="slist" id="dm-slist"></div>
+      </div>
+
+    </div>
   </div>
 
-  <!-- FAQ -->
+  <!-- FAQ ACCORDION -->
   <div class="section-label">Preguntas frecuentes</div>
 
-  <div class="card faq-list">
-    <div class="faq-row">
-      <div class="faq-q">¿Qué pasa si "Take Two" no está en el setlist?</div>
-      <div class="faq-a">Se hará durante <span class="hl">"Magic Shop"</span>. Si ninguna canción está disponible, se modificará y avisará de inmediato. Espera nuestra confirmación.</div>
-    </div>
-    <div class="faq-row">
-      <div class="faq-q">¿Puedo hacer mi propio corazón?</div>
-      <div class="faq-a">¡Claro! Encuentra los materiales y la guía de colores aquí:</div>
-      <a class="btn-brand btn-canva faq-btn" href="https://www.canva.com/design/DAHDH8piK6k/jQRHbJb7aPI1so2Ezmm5RA/edit" target="_blank">
-        <div class="bicon" style="background:rgba(255,255,255,.18); border-radius:6px;">✦</div>
-        <div class="blabel">Descargar plantilla — Canva</div>
-        <div class="barrow">↗</div>
-      </a>
-    </div>
-    <div class="faq-row">
-      <div class="faq-q">¿Cómo ser voluntaria?</div>
-      <div class="faq-a">¡Genial! Llena el formulario y nos pondremos en contacto contigo 💜</div>
-      <a class="btn-brand btn-forms faq-btn" href="https://forms.gle/rXWNwRULpZThAmMS7" target="_blank">
-        <div class="bicon">📋</div>
-        <div class="blabel">Formulario de voluntarias — Google Forms</div>
-        <div class="barrow">↗</div>
-      </a>
-    </div>
-    <div class="faq-row">
-      <div class="faq-q">¿Cómo me entero de más detalles?</div>
-      <div class="faq-a">Sigue a las fanbases organizadoras en X (Twitter) para actualizaciones en tiempo real.</div>
-    </div>
-  </div>
+  <div class="card faq-list" id="faq-list">
 
-  <!-- COLORES -->
-  <div class="section-label">Haz tu propio corazón — Colores</div>
-  <div class="card colors-card">
-    <div class="swatches">
-      <div class="swatch"><div class="swatch-dot" style="background:#6A0DAD"></div>#6A0DAD</div>
-      <div class="swatch"><div class="swatch-dot" style="background:#772FAD"></div>#772FAD</div>
-      <div class="swatch"><div class="swatch-dot" style="background:#BA81E2"></div>#BA81E2</div>
+    <div class="faq-item">
+      <button class="faq-q">¿Qué pasa si no cantan Into the Sun? <span class="faq-chevron">▼</span></button>
+      <div class="faq-a">Se darán más detalles más adelante. La alianza confirmará o comunicará cualquier cambio antes del concierto.</div>
     </div>
-    <div class="zones-row">
-      <span>📐 <strong>Zona Platino:</strong> corazón pequeño</span>
-      <span>&nbsp;·&nbsp;</span>
-      <span>💜 <strong>Otras zonas:</strong> corazón grande</span>
+
+    <div class="faq-item">
+      <button class="faq-q">¿Lleva frase? <span class="faq-chevron">▼</span></button>
+      <div class="faq-a">Sí, para <span class="hl">Platino A</span> — por ser la zona más cercana al escenario. El corazón lleva <span class="hl">"I'll Follow You"</span> en un lado y el otro queda limpio, por si no se canta Into the Sun. Las demás zonas serán solo corazones morados, aunque cualquiera puede llevar su propio corazón con frase.</div>
     </div>
-    <div class="materials-block">
-      <div class="materials-title">Si usarás hoja de color para el 💜, aquí hay algunas opciones:</div>
-      <ul class="materials-list">
-        <li>Hoja de máquina color morado o lila</li>
-        <li>Hoja Saira</li>
-        <li>Papel Bristol</li>
-        <li>Papel Iris</li>
-      </ul>
+
+    <div class="faq-item">
+      <button class="faq-q">¿Cómo consigo mi corazón en el estadio? <span class="faq-chevron">▼</span></button>
+      <div class="faq-a">Las voluntarias los repartirán dentro del recinto por sección. Tu administradora de zona te dirá el punto de entrega en el grupo de WhatsApp correspondiente. Solo para asistentes del <span class="hl">7 de mayo 2026</span>.</div>
     </div>
+
+    <div class="faq-item">
+      <button class="faq-q">¿Puedo hacer mi propio corazón? <span class="faq-chevron">▼</span></button>
+      <div class="faq-a">
+        ¡Claro! Descarga la plantilla y sigue la guía de colores y tamaño.
+        <a class="btn-brand btn-canva faq-btn" href="https://www.canva.com/design/DAHDH8piK6k/jQRHbJb7aPI1so2Ezmm5RA/edit" target="_blank">
+          <div class="bicon" style="border-radius:6px;">✦</div>
+          <div class="blabel">Descargar plantilla — Canva</div>
+          <div class="barrow">↗</div>
+        </a>
+        <div style="margin-top:14px; padding-top:14px; border-top:1px solid var(--border);">
+          <div style="font-size:.78rem; color:var(--text); margin-bottom:10px; font-weight:600;">Colores del proyecto</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--text);">
+              <div style="width:18px;height:18px;border-radius:50%;background:#6A0DAD;border:1.5px solid rgba(0,0,0,.08);flex-shrink:0;"></div>#6A0DAD
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--text);">
+              <div style="width:18px;height:18px;border-radius:50%;background:#772FAD;border:1.5px solid rgba(0,0,0,.08);flex-shrink:0;"></div>#772FAD
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--text);">
+              <div style="width:18px;height:18px;border-radius:50%;background:#BA81E2;border:1.5px solid rgba(0,0,0,.08);flex-shrink:0;"></div>#BA81E2
+            </div>
+          </div>
+          <div style="font-size:.75rem;color:var(--muted);margin-bottom:6px;">📐 <strong style="color:var(--text)">Platino A:</strong> corazón pequeño &nbsp;·&nbsp; 💜 <strong style="color:var(--text)">Otras zonas:</strong> corazón grande</div>
+          <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
+            <div style="font-size:.75rem;color:var(--text);margin-bottom:6px;">Si usarás hoja de color para el 💜, algunas opciones:</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:4px;">
+              <li style="font-size:.75rem;color:var(--muted);padding-left:13px;position:relative;"><span style="position:absolute;left:0;color:var(--p3);">—</span>Hoja de máquina color morado o lila</li>
+              <li style="font-size:.75rem;color:var(--muted);padding-left:13px;position:relative;"><span style="position:absolute;left:0;color:var(--p3);">—</span>Hoja Saira</li>
+              <li style="font-size:.75rem;color:var(--muted);padding-left:13px;position:relative;"><span style="position:absolute;left:0;color:var(--p3);">—</span>Papel Bristol</li>
+              <li style="font-size:.75rem;color:var(--muted);padding-left:13px;position:relative;"><span style="position:absolute;left:0;color:var(--p3);">—</span>Papel Iris</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">¿Cómo ser voluntaria? <span class="faq-chevron">▼</span></button>
+      <div class="faq-a">
+        Regístrate en el formulario. Recibimos solicitudes hasta el <span class="hl">4 de abril de 2026</span>.
+        <a class="btn-brand btn-forms faq-btn" href="https://forms.gle/rXWNwRULpZThAmMS7" target="_blank">
+          <div class="bicon">📋</div>
+          <div class="blabel">Formulario de voluntarias — Google Forms</div>
+          <div class="barrow">↗</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">¿Cómo me entero de más detalles? <span class="faq-chevron">▼</span></button>
+      <div class="faq-a">Sigue a las fanbases organizadoras en X para actualizaciones en tiempo real.</div>
+    </div>
+
   </div>
 
   <!-- ORGANIZADORAS -->
@@ -341,33 +354,27 @@
       </a>
       <a class="btn-brand btn-spotify" href="https://open.spotify.com/track/4cOdy8FRlS6WMCzIFMBSv5" target="_blank">
         <div class="bicon">♫</div>
-        <div class="blabel">Take Two — Spotify</div>
-        <div class="barrow">↗</div>
-      </a>
-      <a class="btn-brand btn-wa" href="https://chat.whatsapp.com/KBdkl9BdZCV3Kv3SqgNk5R?mode=gi_t" target="_blank">
-        <div class="bicon">💬</div>
-        <div class="blabel">Grupo de WhatsApp</div>
+        <div class="blabel">Into the Sun — Spotify</div>
         <div class="barrow">↗</div>
       </a>
     </div>
   </div>
 
-  <!-- ══ ARIRANG ══ -->
-  <div class="section-label" style="margin-top: 16px;">Pre-save</div>
-
+  <!-- ESCUCHA ARIRANG -->
+  <div class="section-label" style="margin-top: 16px;">Escucha</div>
   <div class="arirang-card">
     <div class="arirang-top">
-      <h2>🎵 Pre guarda Arirang</h2>
+      <h2>🎵 Escucha Arirang</h2>
     </div>
     <div class="arirang-btns">
       <a class="btn-brand btn-spotify" href="https://open.spotify.com/prerelease/1DcxHW214MCDxXju71RbvX?si=f3e049164b5948ce" target="_blank">
         <div class="bicon">♫</div>
-        <div class="blabel">Pre-save en Spotify</div>
+        <div class="blabel">Escuchar en Spotify</div>
         <div class="barrow">↗</div>
       </a>
       <a class="btn-brand btn-apple" href="https://music.apple.com/mx/album/arirang/1868862375" target="_blank">
         <div class="bicon">🎵</div>
-        <div class="blabel">Pre-save en Apple Music</div>
+        <div class="blabel">Escuchar en Apple Music</div>
         <div class="barrow">↗</div>
       </a>
     </div>
@@ -377,33 +384,162 @@
     <a href="https://twitter.com/axomysmx">@axomysmx</a> ·
     <a href="https://twitter.com/www_bangtan_613">@www_bangtan_613</a> ·
     <a href="https://twitter.com/cinnamoon_bee">@cinnamoon_bee</a><br>
-    Purple Hearts · BTS Take Two · 07 Mayo 2026 · Más detalles próximamente 💜
+    Purple Hearts · BTS Into the Sun · 07 Mayo 2026 · Más detalles próximamente 💜
   </footer>
 
 </div>
+
 <script>
-  // Load Twitter avatars with fallback sources
-  const avatars = [
-    { id: 'av-axomy',   handle: 'axomysmx' },
-    { id: 'av-bangtan', handle: 'www_bangtan_613' },
-    { id: 'av-cinna',   handle: 'cinnamoon_bee' },
-  ];
-  avatars.forEach(({ id, handle }) => {
+  // ── FAQ ACCORDION ──
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ── AVATARS ──
+  const avatarUrls = {
+    'av-axomy':   'https://pbs.twimg.com/profile_images/2019645178991038464/BT-akSb1_400x400.jpg',
+    'av-bangtan': 'https://pbs.twimg.com/profile_images/2019617862143393794/LUvliGOh_400x400.jpg',
+    'av-cinna':   'https://pbs.twimg.com/profile_images/2033611772557725697/aU-Jantu_400x400.jpg',
+  };
+  Object.entries(avatarUrls).forEach(([id, url]) => {
     const img = document.getElementById(id);
     if (!img) return;
-    const sources = [
-      `https://unavatar.io/twitter/${handle}`,
-      `https://unavatar.io/x/${handle}`,
-      `https://api.dicebear.com/7.x/initials/svg?seed=${handle}&backgroundColor=e5d4f7&textColor=6A0DAD`,
-    ];
-    let i = 0;
-    function tryNext() {
-      if (i >= sources.length) return;
-      img.src = sources[i++];
-      img.onload = () => img.classList.add('loaded');
-      img.onerror = tryNext;
+    img.src = url;
+  });
+
+  // ── DECISION MAP ──
+  const waLinks = {
+    naranja:  'https://chat.whatsapp.com/Ln0cwWqnsCp8I5m7L0HglM?mode=gi_t',
+    boxes:    'https://chat.whatsapp.com/F61pcGHmJqrIIq40jXmpcf?mode=gi_t',
+    platinoA: 'https://chat.whatsapp.com/KOCjQ8Cz92yIIw1QTlw9fX?mode=gi_t',
+    platinoB: 'https://chat.whatsapp.com/KOCjQ8Cz92yIIw1QTlw9fX?mode=gi_t',
+    verde:    'https://chat.whatsapp.com/Ih1g9Y0lBf8CsYzcpNYiE3?mode=gi_t',
+    morada:   'https://chat.whatsapp.com/JrTLiNiJGLs2SvWtlThA8i?mode=gi_t',
+  };
+  const waVol = 'https://chat.whatsapp.com/KOCjQ8Cz92yIIw1QTlw9fX?mode=gi_t';
+
+  const zones = [
+    { id: 'naranja',  label: 'Zona Naranja',  desc: 'Naranja A, B y C' },
+    { id: 'boxes',    label: 'Boxes y PCD',   desc: null },
+    { id: 'platinoA', label: 'Platino A',     desc: 'Zona frontal' },
+    { id: 'platinoB', label: 'Platino B',     desc: 'Zona posterior' },
+    { id: 'verde',    label: 'Zona Verde',    desc: null },
+    { id: 'morada',   label: 'Zona Morada',   desc: null },
+  ];
+
+  const steps = {
+    participate: {
+      platinoA: [
+        { t: 'Tu coordinadora de sección te dará un corazón el día del concierto.' },
+        { t: 'Cuando empiece <strong>Into the Sun</strong> (o la última canción si no la cantan), levanta tu corazón y mantenlo en alto.' },
+        { t: 'Mantén el corazón en alto durante toda la canción.' },
+        { t: 'Únete al grupo de tu zona para recibir instrucciones.', wa: 'zone', linkLabel: 'Grupo WhatsApp Platino A y B' },
+      ],
+      default: [
+        { t: 'Tu coordinadora de sección te dará un corazón el día del concierto.', note: 'Todas las zonas son bienvenidas a llevar su propio corazón también.' },
+        { t: 'Cuando empiece <strong>Into the Sun</strong> (o la última canción), levanta tu corazón y mantenlo en alto.' },
+        { t: 'Mantén el corazón en alto durante toda la canción.' },
+        { t: 'Únete al grupo de tu zona para saber dónde y cuándo te lo entregan.', wa: 'zone', linkLabel: 'Grupo WhatsApp zona' },
+      ],
+    },
+    volunteer: [
+      { t: 'Regístrate en el formulario. <strong>Recibimos solicitudes hasta el 4 de abril de 2026.</strong>', href: 'https://forms.gle/rXWNwRULpZThAmMS7', linkLabel: 'Formulario de voluntarias' },
+      { t: 'Recibirás instrucciones de la administradora de tu zona.' },
+      { t: 'Únete al grupo de voluntarias para coordinar.', wa: 'vol', linkLabel: 'Grupo WhatsApp voluntarias' },
+    ],
+    own: {
+      platinoA: [
+        { t: 'Descarga la plantilla de Canva y sigue las instrucciones de color y tamaño.', href: 'https://www.canva.com/design/DAHDH8piK6k/jQRHbJb7aPI1so2Ezmm5RA/edit', linkLabel: 'Plantilla en Canva' },
+        { t: 'Un lado lleva la frase <strong>"I\'ll Follow You"</strong> y el otro queda limpio.', note: 'Así si no se canta Into the Sun puedes mostrar el lado sin frase.' },
+        { t: 'Materiales sugeridos:', mats: ['Hoja de máquina color morado o lila', 'Hoja Saira', 'Papel Bristol', 'Papel Iris'] },
+        { t: 'Puedes repartir los que hagas alrededor tuyo sin necesidad de inscribirte.' },
+      ],
+      default: [
+        { t: 'Descarga la plantilla de Canva y sigue las instrucciones.', href: 'https://www.canva.com/design/DAHDH8piK6k/jQRHbJb7aPI1so2Ezmm5RA/edit', linkLabel: 'Plantilla en Canva' },
+        { t: 'Puedes hacerlo con o sin frase. Si quieres llevar <strong>"I\'ll Follow You"</strong> visible, ¡adelante!', note: 'Todas las zonas son bienvenidas a llevar la frase.' },
+        { t: 'Materiales sugeridos:', mats: ['Hoja de máquina color morado o lila', 'Hoja Saira', 'Papel Bristol', 'Papel Iris'] },
+        { t: 'Puedes repartir los que hagas entre quienes estén cerca de ti.' },
+      ],
+    },
+  };
+
+  let zone = null, path = null;
+
+  function getSteps() {
+    if (path === 'volunteer') return steps.volunteer;
+    const group = path === 'participate' ? steps.participate : steps.own;
+    return group[zone] || group.default;
+  }
+
+  function renderStep(s, idx, z) {
+    let inner = `<div class="stxt">${s.t}`;
+    if (s.note) inner += `<div class="snote">${s.note}</div>`;
+    if (s.mats) inner += `<ul class="smats">` + s.mats.map(m => `<li>— ${m}</li>`).join('') + `</ul>`;
+    if (s.href) {
+      inner += `<br><a class="slink" href="${s.href}" target="_blank">${s.linkLabel} ↗</a>`;
+    } else if (s.wa) {
+      const href = s.wa === 'vol' ? waVol : (waLinks[z] || null);
+      inner += href
+        ? `<br><a class="slink" href="${href}" target="_blank">${s.linkLabel} ↗</a>`
+        : `<br><span class="slink pending">Grupo próximamente</span>`;
     }
-    tryNext();
+    inner += `</div>`;
+    return `<div class="srow"><div class="sdot">${idx+1}</div>${inner}</div>`;
+  }
+
+  function showSteps() {
+    const list = getSteps();
+    document.getElementById('dm-slist').innerHTML = list.map((s, i) => renderStep(s, i, zone)).join('');
+    document.getElementById('dm-s3').classList.remove('dmap-hidden');
+    document.getElementById('dm-s3').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  const zgrid = document.getElementById('dm-zgrid');
+  zones.forEach(z => {
+    const btn = document.createElement('button');
+    btn.className = 'zbtn';
+    btn.innerHTML = `<div class="zn">${z.label}</div>${z.desc ? `<div class="zd">${z.desc}</div>` : ''}`;
+    btn.addEventListener('click', () => {
+      zone = z.id; path = null;
+      document.querySelectorAll('.zbtn').forEach(b => b.classList.remove('sel'));
+      btn.classList.add('sel');
+      document.querySelectorAll('.pbtn').forEach(b => b.classList.remove('sel'));
+      document.getElementById('dm-s2').classList.remove('dmap-hidden');
+      document.getElementById('dm-s3').classList.add('dmap-hidden');
+      document.getElementById('dm-s2').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+    zgrid.appendChild(btn);
+  });
+
+  document.getElementById('dm-p1').addEventListener('click', function() {
+    path = 'participate';
+    document.querySelectorAll('.pbtn').forEach(b => b.classList.remove('sel'));
+    this.classList.add('sel'); showSteps();
+  });
+  document.getElementById('dm-p2').addEventListener('click', function() {
+    path = 'volunteer';
+    document.querySelectorAll('.pbtn').forEach(b => b.classList.remove('sel'));
+    this.classList.add('sel'); showSteps();
+  });
+  document.getElementById('dm-p3').addEventListener('click', function() {
+    path = 'own';
+    document.querySelectorAll('.pbtn').forEach(b => b.classList.remove('sel'));
+    this.classList.add('sel'); showSteps();
+  });
+  document.getElementById('dm-back1').addEventListener('click', () => {
+    zone = null; path = null;
+    document.querySelectorAll('.zbtn').forEach(b => b.classList.remove('sel'));
+    document.getElementById('dm-s2').classList.add('dmap-hidden');
+    document.getElementById('dm-s3').classList.add('dmap-hidden');
+  });
+  document.getElementById('dm-back2').addEventListener('click', () => {
+    path = null;
+    document.querySelectorAll('.pbtn').forEach(b => b.classList.remove('sel'));
+    document.getElementById('dm-s3').classList.add('dmap-hidden');
   });
 </script>
 </body>
